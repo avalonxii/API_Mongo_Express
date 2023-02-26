@@ -1,0 +1,35 @@
+npm init -> iniciañizar proyecto node -> crea package.json
+
+node 'archivo' -> ejecuta archivo (para eso crear script en package.json)
+
+type modele -> trabajar con imports
+
+semantic versioning ->  ^4.0.2 
+                        ^ -> caret -> hasta cierto punto se actualzia automaticamente (minor y patch)
+                        4 -> major -> Cambia totalmente el contrato. rompe la compatibilidad con versiones anteriores
+                        0 -> minor -> Añade una nueva feature.
+                        2 -> patch -> Parche, hotfix, un arreglo, se ha hecho un cambio que arregla un bug.
+
+
+dependencias -> 
+        - Desarollo (-D) -> Cuando estamos desarrollando (nodemon, linter)
+        - Produccion -> Se necesita para que proyecto funciona (axios, bootstrap)
+
+
+nodemon (-D)-> herramienta que resetea la app cuando detecta algun tipo de cambio en el directorio.
+
+        '.\node_modules\.bin\nodemon index.js'-> para iniciar nodemon en archivo index.js
+        script -> "dev": "nodemon index.js" (no hace falta poner lo de antes puesto que empieza a mirar en el '.\node_modules\.bin')
+
+
+express (p) -> framework para crear un servidor con diferentes rutas las cuales podemos manejar.
+
+cors (p) ->
+
+middleware -> 
+
+mongoose (p) -> conectarse a mongoDB mas facil
+
+
+Por qué este poryecto no usa async /await? -> basicamente no habria ningun venefcio al usarlo aqui,
+no solo eso si no que ademas todo pasaria a retornar pormesas y algunas funciones cambiarian su finalidad y se comlicaria la gestion de errores
