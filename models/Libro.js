@@ -1,14 +1,16 @@
 const { Schema, model } = require('mongoose')
 
 //schema -> contrato(guia) a nivel de aplicacion , no a nivel de base de datos
-const usuarioSchema = new Schema({
-    name: String,
+const libroSchema = new Schema({
+    titulo: String,
+    genero:  String,
+    autor: String,
     date: Date,
-    content: String,
+    resumen: String,
 })
 
 //cambiar el contrato del toJson
-usuarioSchema.set('toJSON',{
+libroSchema.set('toJSON',{
     transform: (document, returnedObject) => {
         returnedObject.id = returnedObject._id
         delete returnedObject._id
@@ -17,6 +19,6 @@ usuarioSchema.set('toJSON',{
 })
 
 //model
-const Usuario = model('usuario', usuarioSchema)
+const Libro = model('libro', libroSchema)
 
-module.exports = Usuario
+module.exports = Libro

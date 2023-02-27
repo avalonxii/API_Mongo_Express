@@ -26,6 +26,8 @@ express (p) -> framework para crear un servidor con diferentes rutas las cuales 
 
 cors (p) ->
 
+body-parser (p) -> 
+
 middleware -> 
 
 mongoose (p) -> conectarse a mongoDB mas facil
