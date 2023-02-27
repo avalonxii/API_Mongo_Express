@@ -3,8 +3,9 @@ const { Schema, model } = require('mongoose')
 //schema -> contrato(guia) a nivel de aplicacion , no a nivel de base de datos
 const usuarioSchema = new Schema({
     name: String,
+    email: String,
+    passw: String,
     date: Date,
-    content: String,
 })
 
 //cambiar el contrato del toJson

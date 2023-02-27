@@ -52,13 +52,14 @@ app.use(cors('*'))
     app.post(API_URL_usuarios, (req, res) => {
 
         //los datos que se reciben, destruturing
-        const {name, content} = req.body
+        const {name, email, passw, date} = req.body
 
         //crea nota
         const newUsuario = new Usuario({
-            name, // name: name
+            name,  // name: name
+            email,
+            passw,
             date: new Date(),
-            content
         })
 
         //guarda la nota en la abse de datos y devuelve la nota creada si todo ha ido bien
